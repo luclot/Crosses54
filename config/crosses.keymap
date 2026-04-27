@@ -6,17 +6,41 @@
 / {
     chosen { zmk,physical-layout = &gggw_crosses_54_layout; };
 
+    combos {
+        compatible = "zmk,combos";
+
+        Combo1 {
+            bindings = <&tog 3>;
+            key-positions = <50 49>;
+        };
+
+        Combo2 {
+            bindings = <&tog 1>;
+            key-positions = <49 48>;
+        };
+
+        Combo3 {
+            bindings = <&kp RIGHT_ALT>;
+            key-positions = <51 52>;
+        };
+
+        Combo4 {
+            bindings = <&kp RIGHT_WIN>;
+            key-positions = <52 53>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
         default_layer {
             display-name = "Base";
             bindings = <
-&kp TILDE  &kp N1  &kp N2  &kp N3            &kp N4         &kp N5     &kp N6     &kp N7   &kp N8               &kp N9         &kp N0      &kp GRAVE
-&kp TAB    &kp B   &kp L   &kp D             &kp C          &kp V      &kp J      &kp F    &kp O                &kp U          &kp COMMA   &kp BSPC
-&kp LCTRL  &kp N   &kp R   &kp T             &kp S          &kp G      &kp Y      &kp H    &kp A                &kp E          &kp I       &kp SQT
-&kp LSHFT  &kp X   &kp Q   &kp M             &kp W          &kp Z      &kp K      &kp P    &kp SQT              &kp SEMICOLON  &kp PERIOD  &kp ESC
-                           &lt 3 LEFT_SHIFT  &kp BACKSPACE  &kp ENTER  &kp SPACE  &kp DEL  &lt 2 RIGHT_CONTROL
+&kp TILDE  &kp N1  &kp N2  &kp N3                    &kp N4         &kp N5     &kp N6     &kp N7   &kp N8                    &kp N9         &kp N0      &kp GRAVE
+&kp TAB    &kp B   &kp L   &kp D                     &kp C          &kp V      &kp J      &kp F    &kp O                     &kp U          &kp COMMA   &kp BSPC
+&kp LCTRL  &kp N   &kp R   &kp T                     &kp S          &kp G      &kp Y      &kp H    &kp A                     &kp E          &kp I       &kp SQT
+&kp LSHFT  &kp X   &kp Q   &kp M                     &kp W          &kp Z      &kp K      &kp P    &kp SQT                   &kp SEMICOLON  &kp PERIOD  &mt RIGHT_CONTROL ESCAPE
+                           &mt RIGHT_CONTROL ESCAPE  &kp BACKSPACE  &kp ENTER  &kp SPACE  &kp DEL  &mt RIGHT_SHIFT CAPSLOCK
             >;
         };
 
