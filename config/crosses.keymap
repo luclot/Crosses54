@@ -10,12 +10,12 @@
         compatible = "zmk,combos";
 
         Combo1 {
-            bindings = <&tog 3>;
+            bindings = <&kp LEFT_WIN>;
             key-positions = <50 49>;
         };
 
         Combo2 {
-            bindings = <&tog 1>;
+            bindings = <&tog 3>;
             key-positions = <49 48>;
         };
 
@@ -25,7 +25,7 @@
         };
 
         Combo4 {
-            bindings = <&kp RIGHT_WIN>;
+            bindings = <&tog 1>;
             key-positions = <52 53>;
         };
     };
@@ -36,11 +36,11 @@
         default_layer {
             display-name = "Base";
             bindings = <
-&kp TILDE  &kp N1  &kp N2  &kp N3                    &kp N4         &kp N5     &kp N6     &kp N7   &kp N8                    &kp N9         &kp N0      &kp GRAVE
-&kp TAB    &kp B   &kp L   &kp D                     &kp C          &kp V      &kp J      &kp F    &kp O                     &kp U          &kp COMMA   &kp BSPC
-&kp LCTRL  &kp N   &kp R   &kp T                     &kp S          &kp G      &kp Y      &kp H    &kp A                     &kp E          &kp I       &kp SQT
-&kp LSHFT  &kp X   &kp Q   &kp M                     &kp W          &kp Z      &kp K      &kp P    &kp SQT                   &kp SEMICOLON  &kp PERIOD  &mt RIGHT_CONTROL ESCAPE
-                           &mt RIGHT_CONTROL ESCAPE  &kp BACKSPACE  &kp ENTER  &kp SPACE  &kp DEL  &mt RIGHT_SHIFT CAPSLOCK
+&kp TILDE    &kp N1  &kp N2  &kp N3                    &kp N4         &kp N5     &kp N6     &kp N7   &kp N8                    &kp N9         &kp N0      &kp LEFT_BRACKET
+&kp TAB      &kp B   &kp L   &kp D                     &kp C          &kp V      &kp J      &kp F    &kp O                     &kp U          &kp COMMA   &kp RIGHT_BRACKET
+&kp MINUS    &kp N   &kp R   &kp T                     &kp S          &kp G      &kp Y      &kp H    &kp A                     &kp E          &kp I       &kp SLASH
+&lt 2 EQUAL  &kp X   &kp Q   &kp M                     &kp W          &kp Z      &kp K      &kp P    &kp SQT                   &kp SEMICOLON  &kp PERIOD  &lt 2 BACKSLASH
+                             &mt RIGHT_CONTROL ESCAPE  &kp BACKSPACE  &kp ENTER  &kp SPACE  &kp DEL  &mt RIGHT_SHIFT CAPSLOCK
             >;
         };
 
@@ -69,11 +69,11 @@
         mouse_layer {
             display-name = "Mouse";
             bindings = <
-&trans  &trans  &trans     &trans     &trans     &trans  &trans  &trans  &trans  &trans  &trans  &studio_unlock
-&trans  &trans  &trans     &trans     &trans     &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &mkp RCLK  &mkp MCLK  &mkp LCLK  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans     &trans     &trans     &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                           &trans     &trans     &trans  &trans  &trans  &trans
+&trans  &trans  &trans          &trans          &trans           &trans  &trans     &trans          &trans          &trans           &trans  &studio_unlock
+&trans  &trans  &trans          &msc SCRL_UP    &trans           &trans  &trans     &trans          &mmv MOVE_UP    &trans           &trans  &trans
+&trans  &trans  &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_RIGHT  &trans  &trans     &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans  &trans
+&trans  &trans  &trans          &trans          &trans           &trans  &trans     &trans          &trans          &trans           &trans  &trans
+                                &trans          &trans           &trans  &mkp LCLK  &mkp MCLK       &mkp RCLK
             >;
         };
     };
